@@ -83,7 +83,7 @@ resource "google_compute_firewall" "demo_firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "80", "443", "8080", "8443"]
+    ports    = ["22", "80", "443", "8080", "8443", "6443"]
   }
 
   source_ranges = ["0.0.0.0/0"]
