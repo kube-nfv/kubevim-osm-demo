@@ -1,0 +1,21 @@
+# GCP Configuration
+project_id = "analog-forest-470614-v1"
+region     = "europe-central2"
+zone       = "europe-central2-a"
+
+# DNS Configuration  
+dns_zone_name = "demo-kubenfv-io"
+dns_name      = "demo.kubenfv.io."
+
+# VM Configuration
+instance_name   = "kubenfv-demo"
+machine_type    = "e2-standard-4"
+disk_size       = 100
+static_ip_name  = "demo-static-ip"
+
+# Firewall Configuration
+firewall_rule_name = "kubenfv-demo-firewall"
+
+# SSH Configuration
+ssh_user            = "ubuntu"
+ssh_public_key_path = "~/.ssh/google_compute_engine.pub"
