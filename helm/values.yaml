@@ -1,0 +1,17 @@
+# External services configuration
+externalServices:
+  # List of ExternalName services to create
+  services:
+    - name: x11spl-f-server-1
+      annotations:
+        tailscale.com/tailnet-ip: 100.86.123.103
+    - name: x11spl-f-cluster-kubevim-access
+      annotations:
+        tailscale.com/tailnet-ip: 192.168.33.149
+        tailscale.com/proxy-class: accept-routes
+  
+  # Default annotations applied to all external services (optional)
+  defaultAnnotations: {}
+  
+  # Default external name placeholder (can be overridden per service)
+  defaultExternalName: placeholder

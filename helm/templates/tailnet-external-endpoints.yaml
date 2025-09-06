@@ -1,0 +1,19 @@
+{{- range .Values.externalServices.services }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .name }}
+  {{- if or .annotations $.Values.externalServices.defaultAnnotations }}
+  annotations:
+    {{- with $.Values.externalServices.defaultAnnotations }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+    {{- with .annotations }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- end }}
+spec:
+  type: ExternalName
+  externalName: {{ .externalName | default $.Values.externalServices.defaultExternalName }}
+{{- end }}
