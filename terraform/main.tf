@@ -65,6 +65,17 @@ resource "google_compute_instance" "demo_instance" {
   }
 }
 
+# DNS A record for wildcard *.demo.kubenfv.io
+resource "google_dns_record_set" "wildcard_a_record" {
+  name = "*.${var.dns_name}"
+  type = "A"
+  ttl  = 300
+
+  managed_zone = google_dns_managed_zone.demo_zone.name
+
+  rrdatas = [google_compute_address.demo_static_ip.address]
+}
+
 # Firewall rules for common services
 resource "google_compute_firewall" "demo_firewall" {
   name    = var.firewall_rule_name
