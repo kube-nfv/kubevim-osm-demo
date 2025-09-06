@@ -1,0 +1,9 @@
+apiVersion: v2
+name: kubevim-osm-demo
+type: application
+description: A Helm chart for bootstrap additional kubevim related components to the osm cluster
+version: 0.0.1
+dependencies:
+  - name: tailscale-operator
+    version: 1.86.5
+    repository: https://pkgs.tailscale.com/helmcharts
