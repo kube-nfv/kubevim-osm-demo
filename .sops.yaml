@@ -1,12 +1,16 @@
 creation_rules:
+  # Rule for kubeconfig file
+  - path_regex: ^kubeconfig\.yaml$
+    key_groups:
+      - age:
+          - age1sxh3cuav8fa2vl6xzwld3xxa50zqyw9ckwf35f99mvn0xtlv9dusam7cfq # Dmytro Malovanyi
   # Rule for helm secrets
   - path_regex: ^helm/secrets\.yaml$
     key_groups:
       - age:
-          - age1sxh3cuav8fa2vl6xzwld3xxa50zqyw9ckwf35f99mvn0xtlv9dusam7cfq
-
+          - age1sxh3cuav8fa2vl6xzwld3xxa50zqyw9ckwf35f99mvn0xtlv9dusam7cfq # Dmytro Malovanyi
   # Rule for terraform secrets
   - path_regex: ^terraform/(terraform\.tfvars|terraform\.tfstate)$
     key_groups:
       - age:
-          - age1sxh3cuav8fa2vl6xzwld3xxa50zqyw9ckwf35f99mvn0xtlv9dusam7cfq
+          - age1sxh3cuav8fa2vl6xzwld3xxa50zqyw9ckwf35f99mvn0xtlv9dusam7cfq # Dmytro Malovanyi
