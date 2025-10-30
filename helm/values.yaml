@@ -9,6 +9,9 @@ externalServices:
       annotations:
         tailscale.com/tailnet-ip: 192.168.33.149
         tailscale.com/proxy-class: accept-routes
+    - name: x11spl-f-setup01-kubevim-access
+      annotations:
+        tailscale.com/tailnet-fqdn: kube-nfv-kube-vim-gateway.tailac05db.ts.net
   
   # Default annotations applied to all external services (optional)
   defaultAnnotations: {}
