@@ -18,3 +18,11 @@ externalServices:
   
   # Default external name placeholder (can be overridden per service)
   defaultExternalName: placeholder
+
+tailscale-operator:
+  operatorConfig:
+    defaultTags:
+    - "tag:osm-demo-operator"
+    hostname: "osm-demo-tailscale-operator"
+  proxyConfig:
+    defaultTags: "tag:osm-demo"

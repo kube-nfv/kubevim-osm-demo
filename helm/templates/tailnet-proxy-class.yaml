@@ -1,8 +1,10 @@
 apiVersion: tailscale.com/v1alpha1
 kind: ProxyClass
 metadata:
-  generation: 2
   name: accept-routes
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "10"
 spec:
   tailscale:
     acceptRoutes: true
